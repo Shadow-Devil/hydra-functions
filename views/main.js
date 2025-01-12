@@ -32,7 +32,7 @@ function exampleTabView (state, emit) {
 
     let functionName;
     if (obj.inputs !== undefined) {
-      functionName = `${obj.name}( ${obj.inputs.map((input) => `${input.name}${input.default ? ` = ${input.default}`: ''}`).join(', ')} )`
+      functionName = `${obj.name}( ${obj.inputs.map((input) => `${input.name}${input.type ? `: ${input.type}`: ''}${input.default ? ` = ${input.default}`: ''}`).join(', ')} )`
     }
     else {
       if (obj.default !== undefined) {
